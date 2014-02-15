@@ -1,0 +1,82 @@
+
+
+
+<view title="'Create a New Favor'">
+  <content has-header="true" has-tabs="true">
+
+
+    <div class="list">
+  <label class="item item-input">
+    <input type="date" placeholder="Recipient" ng-model="newFavor.date">
+  </label>
+
+  <label class="item item-input">
+    <input type="text" placeholder="Recipient" ng-model="newFavor.name">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Role" ng-model="newFavor.role">
+  </label>
+  <label class="item item-input">
+    <textarea placeholder="Comments" ng-model="newFavor.description"></textarea>
+  </label>
+</div>
+
+    
+    <button class="button button-full button-positive" ng-click="saveNewFavor()">
+ Save 
+</button>
+   <!--  <div class="list">
+        <div class="item item-divider">
+          Favor Details
+        </div>
+        <label class="item item-input">
+          <span class="input-label">Favor Date</span>
+          <input type="date" ng-model="newFavor.date">
+        </label> -->
+
+<!--     <div class="item item-divider">
+    To / From:
+    </div> -->
+      <!-- <label class="item item-radio">
+        <input type="text" name="favorType" ng-model="newFavor.recipient">
+        <div class="item-content">
+          <i class="icon ion-ios7-partlysunny-outline"></i>  Did a favor for:
+        </div>
+        <i class="radio-icon ion-checkmark"></i>
+      </label> -->
+
+    <!--   <label class="item item-radio">
+        <input type="text" name="favorType" ng-model="newFavor.giver">
+        <div class="item-content">
+          <i class="icon ion-ios7-cloudy-night-outline"></i>   Received a favor from:
+        </div>
+        <i class="radio-icon ion-checkmark"></i>
+      </label>
+ -->
+    <!-- pull contacts list from phone -->
+    <!-- <div class="row item">
+      <select ng-options="contact as contact.name for contact in contacts" ng-model="newFavor.contact"></select>
+    </div> -->
+    <!-- end contact list -->
+    <!-- <div class="item item-divider">
+      Description
+    </div> -->
+<!--       <label class="item item-input item-stacked-label"> Description: -->
+        <textarea placeholder="Rick gave an excellent pitch for my project..."></textarea>
+<!--       </label> -->
+<!-- stars -->
+  <div class="item item-divider">
+    Rate favor
+  </div>
+  <div class="item range range-balanced">
+    <i class="icon ion-ios7-star-outline"></i>
+    <input type="range" name="stars" min="0" max="5" ng-model="favor.rating">
+    <i class="icon ion-ios7-star"></i>  <i class="icon ion-ios7-star"></i>  <i class="icon ion-ios7-star"></i>
+  </div>
+
+  {{newFavor}}
+
+
+    </div>
+  </content>
+</view>

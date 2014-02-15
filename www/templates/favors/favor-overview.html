@@ -1,0 +1,12 @@
+
+<view title="'Favors Overview'">
+  <content has-header="true" has-tabs="true">
+    <list>
+      <item ng-repeat="favor in favors | orderBy: -date | limitTo: -50" type="item-text-wrap" href="#/tab/favor/{{favor.id}}">
+	        <h3>{{favor.name}}</h3>
+	        <h3>{{favor.role}}</h3>
+        </item>
+      </item>
+    </list>
+  </content>
+</view>

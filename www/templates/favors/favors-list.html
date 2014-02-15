@@ -1,0 +1,15 @@
+<view title="'Favors App'">
+  <content has-header="true">
+    <list>
+      
+      <item ng-repeat="favor in favors" type="item-text-wrap" ng-href="#/home/favors/{{$index}}">
+            		<h3>{{favor.date}}</h3>
+	        <h3>{{favor.role}}</h3>
+	        <h3>{{favor.name}}</h3>
+	        <p>{{favor.description}}</p>
+        
+      </item>
+    </list>
+
+  </content>
+</view>

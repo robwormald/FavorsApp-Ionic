@@ -1,0 +1,48 @@
+<view>
+	<div class="bar bar-header bar-positive">
+  <h1 class="title">Welcome to Favors</h1>
+</div>
+
+	<content has-header="false" padding="false">
+
+<!-- 		<header class="bar bar-header bar-dark">
+			<h1 class="title">Favors App</h1>
+		</header> -->
+
+		<div class="padTop">
+			<div class="row">
+			  <div class="col col-33 col-offset-33">		
+			  	<img src="/icons/father120x120.png">
+			  </div>
+			</div>  
+			<!-- form when submitted should go invoke login function -->
+
+			<form class="list list-inset">
+<!-- 			  <label class="item item-input">
+			    <input type="text" placeholder="Email">
+			  </label> -->
+				<label class="item item-input">
+				    <span class="input-label">Email</span>
+				    <input type="text" ng-model="userObject.email">
+				</label>			  
+				<label class="item item-input">
+		  	    	<span class="input-label">Password</span>
+				    <input type="password" ng-model="userObject.password">
+			    </label>
+
+			    <label class="item item-input" ng-show="userObject.unregistered">
+		  	    	<span class="input-label">Confirm Password</span>
+				    <input type="password" ng-model="userObject.confirmedPassword">
+			    </label>
+<!-- 			  <label class="item item-input">
+			    <input type="text" placeholder="Password">
+			  </label> -->
+			  <button class="button button-block button-balanced" ng-click="login(userObject)" ng-hide="userObject.unregistered">Login</button>
+			</form>
+			<div class="list-inset">
+				
+			
+			  <button class="button button-block button-positive" ng-click="register(userObject)" ng-show="userObject.unregistered">Register Now</button> 
+			</div>
+	</content> 
+</view>
